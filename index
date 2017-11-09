@@ -21,8 +21,8 @@
     <h1>Segunda parte del examen Francisco Jiménez</h1>
     <div id='map'></div>
 
-    <script src="Cantones.js"  type="text/javascript"></script>
-    <script src="Cantones.js"  type="text/javascript"></script>
+    <script src="tenencia.js"  type="text/javascript"></script>
+    <script src="tenencia.js"  type="text/javascript"></script>
 	  
 <!-- Referencia al complemento Leaflet-providers -->	 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.1.7/leaflet-providers.js"></script>
