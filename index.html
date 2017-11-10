@@ -110,8 +110,31 @@
       })
       registrocanton.addTo(mapa);	
 		
-	
-	<!-- Definición de poblacion del Cantón-->
+	// Defino la variable tenencia ////////////////////////////////// 		
+	function infotenencia(feature, layer) {
+	var popupContent = "Nombre de propietario: ";
+	if (feature.properties && feature.properties.PLANO) {
+	  popupContent += feature.properties.PLANO;
+	}
+	layer.bindPopup(popupContent);
+      }	     
+      registrotenencia = L.geoJson(tenencia, {
+        style: function (feature) {
+	  return {
+            fillColor: '#ccffcc', 
+            color: '#ffffff'
+          };
+        },
+              
+	onEachFeature: infocanton
+      })
+      registrotenencia.addTo(mapa);	
+	    
+	    
+	    
+	    
+	    
+	//<!-- Definición de poblacion del Cantón-->
 		
 	function color(d) {
 	return     d > 230000 ? '#7d7f7f' :
@@ -145,8 +168,11 @@
 	onEachFeature: poblacion
       })
       pob.addTo(mapa);
-      	    
-	  <!-- Visualizacion -->  
+      	     
+	    
+	    
+	    
+	///  <!-- Visualizacion -->  
       L.control.scale().addTo(mapa)	  
       var baseLayers = {
 	"OpenStreetMap": osm,
@@ -162,6 +188,7 @@
 	"Provincias": wmsprovincia,
 	"Distritos": wmsdistrito,
 	"Nombres de calles": wmsnom_calles
+	"
       };
   
    
